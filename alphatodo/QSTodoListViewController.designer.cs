@@ -17,12 +17,20 @@ namespace alphatodo
 		[Outlet]
 		MonoTouch.UIKit.UITextField itemText { get; set; }
 
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UITextField itemOwner { get; set; }
+
 		[Action ("OnAdd:")]
 		[GeneratedCode ("iOS Designer", "1.0")]
 		partial void OnAdd (UIButton sender);
 
 		void ReleaseDesignerOutlets ()
 		{
+			if (itemOwner != null) {
+				itemOwner.Dispose ();
+				itemOwner = null;
+			}
 		}
 	}
 }
