@@ -113,6 +113,8 @@ namespace alphatodo
 
 			var newItem = new ToDoItem {
 				Text = itemText.Text, 
+                Owner = itemOwner.Text, //adds new extended field -- added by fabian williams
+                Description = "None Really - Auto Added", //added by fabian williams 
 				Complete = false
 			};
 
@@ -124,6 +126,7 @@ namespace alphatodo
 			UITableViewRowAnimation.Top);
 
 			itemText.Text = "";
+		    itemOwner.Text = ""; //clears out control -- added by fabian williams as exended
 		}
 
 		#endregion
